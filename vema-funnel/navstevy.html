@@ -1,0 +1,705 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-mermaid">:root { --mermaid-theme: default; --mermaid-sequence-numbers: off; --mermaid-flowchart-curve: linear; --mermaid--gantt-left-padding: 75; --sequence-theme: simple; }
+.privacy { display: none; }
+
+</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; white-space: nowrap; overflow: visible; }
+foreignobject { overflow: visible; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+li p { orphans: 1; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+</style>
+<style type='text/css'  id="style-codemirror">.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+</style>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&amp;subset=latin,latin-ext' type='text/css' />
+<style type='text/css'  id="style-theme_css">:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', 'SF Pro', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
+
+<title>navstevy</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='záznam-dat-o-návštěvách'><span>Záznam dat o návštěvách</span></h1><h2 id='zpracování-požadavků-na-straně-serveru'><span>Zpracování požadavků na straně serveru</span></h2><p><span>Jakmile si chce uživatel zobrazit libovolnou stránku na webu, tak se klasicky odešle HTTP požadavek na server. Zpracování tohoto požadavku na serveru je popsáno na následujícím schématu.</span></p><div class="md-diagram-panel md-fences-adv-panel" lang="mermaid"><svg id="mermaidChart572" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart mermaid-svg" style="max-width: 662.28515625px;" viewBox="0 0 662.28515625 2217.375" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#mermaidChart572{font-family:sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaidChart572 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaidChart572 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaidChart572 .error-icon{fill:#552222;}#mermaidChart572 .error-text{fill:#552222;stroke:#552222;}#mermaidChart572 .edge-thickness-normal{stroke-width:1px;}#mermaidChart572 .edge-thickness-thick{stroke-width:3.5px;}#mermaidChart572 .edge-pattern-solid{stroke-dasharray:0;}#mermaidChart572 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaidChart572 .edge-pattern-dashed{stroke-dasharray:3;}#mermaidChart572 .edge-pattern-dotted{stroke-dasharray:2;}#mermaidChart572 .marker{fill:#333333;stroke:#333333;}#mermaidChart572 .marker.cross{stroke:#333333;}#mermaidChart572 svg{font-family:sans-serif;font-size:16px;}#mermaidChart572 p{margin:0;}#mermaidChart572 .label{font-family:sans-serif;color:#333;}#mermaidChart572 .cluster-label text{fill:#333;}#mermaidChart572 .cluster-label span{color:#333;}#mermaidChart572 .cluster-label span p{background-color:transparent;}#mermaidChart572 .label text,#mermaidChart572 span{fill:#333;color:#333;}#mermaidChart572 .node rect,#mermaidChart572 .node circle,#mermaidChart572 .node ellipse,#mermaidChart572 .node polygon,#mermaidChart572 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaidChart572 .rough-node .label text,#mermaidChart572 .node .label text,#mermaidChart572 .image-shape .label,#mermaidChart572 .icon-shape .label{text-anchor:middle;}#mermaidChart572 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaidChart572 .rough-node .label,#mermaidChart572 .node .label,#mermaidChart572 .image-shape .label,#mermaidChart572 .icon-shape .label{text-align:center;}#mermaidChart572 .node.clickable{cursor:pointer;}#mermaidChart572 .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#mermaidChart572 .arrowheadPath{fill:#333333;}#mermaidChart572 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaidChart572 .flowchart-link{stroke:#333333;fill:none;}#mermaidChart572 .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaidChart572 .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaidChart572 .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaidChart572 .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaidChart572 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaidChart572 .cluster text{fill:#333;}#mermaidChart572 .cluster span{color:#333;}#mermaidChart572 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaidChart572 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaidChart572 rect.text{fill:none;stroke-width:0;}#mermaidChart572 .icon-shape,#mermaidChart572 .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaidChart572 .icon-shape p,#mermaidChart572 .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#mermaidChart572 .icon-shape rect,#mermaidChart572 .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaidChart572 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaidChart572 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaidChart572 :root{--mermaid-alt-font-family:sans-serif;}</style><g><marker id="mermaidChart572_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaidChart572_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaidChart572_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaidChart572_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaidChart572_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaidChart572_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M260.273,62L260.273,87L260.273,108" id="L_A_B_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M260.273,166L260.273,191L260.695,212.501" id="L_B_C_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M213.695,385.297L148.156,468.875L148.603,502.375" id="L_C_D_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M207.24,728.104L275.387,823.188L336.731,858.205" id="L_D_E_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M314.255,378.894L402.617,468.875L402.617,646.031L402.617,823.188L394.799,856.295" id="L_C_E_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M137.639,775.671L133.043,823.188L133.043,887.188L133.043,951.188L133.043,1039.188L133.043,1115.188L190.509,1138.674" id="L_D_F_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M387.504,914.188L387.504,951.188L387.504,984.188" id="L_E_E1_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M387.504,1090.188L387.504,1115.188L330.038,1138.674" id="L_E1_F_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M260.273,1194.188L260.273,1219.188L260.695,1240.688" id="L_F_G_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M215.795,1364.897L117.27,1446.375L117.27,1510.375L117.27,1562.375L117.27,1614.375L117.27,1666.375L117.27,1742.375L117.27,1818.375L182.262,1842.008" id="L_G_J_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M305.752,1364.897L403.277,1446.375L403.277,1479.375" id="L_G_H_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M403.277,1537.375L403.277,1562.375L403.277,1583.375" id="L_H_I_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M403.277,1641.375L403.277,1666.375L403.277,1687.375" id="L_I_I1_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M403.277,1793.375L403.277,1818.375L338.285,1842.008" id="L_I1_J_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M260.273,1897.375L260.273,1922.375L260.273,1943.375" id="L_J_K_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M260.273,2001.375L260.273,2026.375L260.273,2047.375" id="L_K_L_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path><path d="M260.273,2105.375L260.273,2130.375L260.273,2151.375" id="L_L_M_0" class=" edge-thickness-thick edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart572_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(148.15625, 468.875)"><g class="label" transform="translate(-14.234375, -12)"><foreignObject width="28.46875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "><p>Ano</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(275.38671875, 823.1875)"><g class="label" transform="translate(-10.2265625, -12)"><foreignObject width="20.453125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "><p>Ne</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(402.6171875, 646.03125)"><g class="label" transform="translate(-10.2265625, -12)"><foreignObject width="20.453125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "><p>Ne</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(133.04296875, 951.1875)"><g class="label" transform="translate(-14.234375, -12)"><foreignObject width="28.46875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "><p>Ano</p></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(117.26953125, 1614.375)"><g class="label" transform="translate(-14.234375, -12)"><foreignObject width="28.46875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "><p>Ano</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(403.27734375, 1446.375)"><g class="label" transform="translate(-10.2265625, -12)"><foreignObject width="20.453125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "><p>Ne</p></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default  " id="flowchart-A-0" transform="translate(260.2734375, 35)"><rect class="basic label-container" style="fill:#c2e0c6 !important;stroke:#333 !important;stroke-width:2px !important" rx="5" ry="5" x="-129.265625" y="-27" width="258.53125" height="54"></rect><g class="label" style="" transform="translate(-114.265625, -12)"><rect></rect><foreignObject width="228.53125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Uživatel si chce zobrazit stránku</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-B-1" transform="translate(260.2734375, 139)"><rect class="basic label-container" style="" x="-217.0625" y="-27" width="434.125" height="54"></rect><g class="label" style="" transform="translate(-187.0625, -12)"><rect></rect><foreignObject width="374.125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Načíst z HTTP požadavku obsah cookie <b>render_css</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-C-2" transform="translate(260.2734375, 323.9375)"><polygon points="107.9375,0 215.875,-107.9375 107.9375,-215.875 0,-107.9375" class="label-container" transform="translate(-107.9375,107.9375)" style="fill:#fff2cc !important;stroke:#333 !important;stroke-width:2px !important"></polygon><g class="label" style="" transform="translate(-68.9375, -24)"><rect></rect><foreignObject width="137.875" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>Je dostupná cookie<br/><b>render_css</b>?</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-D-3" transform="translate(148.15625, 646.03125)"><polygon points="140.15625,0 280.3125,-140.15625 140.15625,-280.3125 0,-140.15625" class="label-container" transform="translate(-140.15625,140.15625)" style="fill:#fff2cc !important;stroke:#333 !important;stroke-width:2px !important"></polygon><g class="label" style="" transform="translate(-77.15625, -48)"><rect></rect><foreignObject width="154.3125" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>Odpovídá hodnota<br/>cookie <b>render_css</b><br/>regulárnímu výrazu<br/><b>^[a-z]{6}_[0-9]{10}$</b>?</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-E-4" transform="translate(387.50390625, 887.1875)"><rect class="basic label-container" style="" x="-189.8125" y="-27" width="379.625" height="54"></rect><g class="label" style="" transform="translate(-159.8125, -12)"><rect></rect><foreignObject width="319.625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Vygenerovat hodnotu pro cookie <b>render_css</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-E1-5" transform="translate(387.50390625, 1039.1875)"><rect class="basic label-container" style="" x="-219.4609375" y="-51" width="438.921875" height="102"></rect><g class="label" style="" transform="translate(-189.4609375, -36)"><rect></rect><foreignObject width="378.921875" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Nastavit expiraci cookie na dva roky.<br/>Zajistit dostupnost ve všech subdoménách.<br/>Uložit vygenerovanou hodnotu do cookie <b>render_css</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-F-6" transform="translate(260.2734375, 1167.1875)"><rect class="basic label-container" style="" x="-188.15625" y="-27" width="376.3125" height="54"></rect><g class="label" style="" transform="translate(-158.15625, -12)"><rect></rect><foreignObject width="316.3125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Načíst z HTTP požadavku obsah cookie <b>svd</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-G-7" transform="translate(260.2734375, 1326.78125)"><polygon points="82.59375,0 165.1875,-82.59375 82.59375,-165.1875 0,-82.59375" class="label-container" transform="translate(-82.59375,82.59375)" style="fill:#fff2cc !important;stroke:#333 !important;stroke-width:2px !important"></polygon><g class="label" style="" transform="translate(-43.59375, -24)"><rect></rect><foreignObject width="87.1875" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>Je dostupná<br/>cookie <b>svd</b>?</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-H-8" transform="translate(403.27734375, 1510.375)"><rect class="basic label-container" style="" x="-251.0078125" y="-27" width="502.015625" height="54"></rect><g class="label" style="" transform="translate(-221.0078125, -12)"><rect></rect><foreignObject width="442.015625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Uložit informace o vstupní stránce do interní databáze návštěv</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-I-9" transform="translate(403.27734375, 1614.375)"><rect class="basic label-container" style="" x="-160.90625" y="-27" width="321.8125" height="54"></rect><g class="label" style="" transform="translate(-130.90625, -12)"><rect></rect><foreignObject width="261.8125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Vygenerovat hodnotu pro cookie <b>svd</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-I1-10" transform="translate(403.27734375, 1742.375)"><rect class="basic label-container" style="" x="-220.34375" y="-51" width="440.6875" height="102"></rect><g class="label" style="" transform="translate(-190.34375, -36)"><rect></rect><foreignObject width="380.6875" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Nastavit expiraci cookie na aktuální session.<br/>Zajistit dostupnost ve všech subdoménách.<br/>Uložit vygenerovanou hodnotu do session-cookie <b>svd</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-J-11" transform="translate(260.2734375, 1870.375)"><rect class="basic label-container" style="" x="-126.6484375" y="-27" width="253.296875" height="54"></rect><g class="label" style="" transform="translate(-96.6484375, -12)"><rect></rect><foreignObject width="193.296875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>Vygenerovat obsah stránky</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-K-12" transform="translate(260.2734375, 1974.375)"><rect class="basic label-container" style="" x="-214.109375" y="-27" width="428.21875" height="54"></rect><g class="label" style="" transform="translate(-184.109375, -12)"><rect></rect><foreignObject width="368.21875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Připojit k obsahu stránky cookies <b>render_css</b> a <b>svd</b></p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-L-13" transform="translate(260.2734375, 2078.375)"><rect class="basic label-container" style="" x="-153.625" y="-27" width="307.25" height="54"></rect><g class="label" style="" transform="translate(-123.625, -12)"><rect></rect><foreignObject width="247.25" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Odeslat stránku zpět do prohlížeče</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-M-14" transform="translate(260.2734375, 2182.375)"><rect class="basic label-container" style="fill:#c2e0c6 !important;stroke:#333 !important;stroke-width:2px !important" rx="5" ry="5" x="-118.6015625" y="-27" width="237.203125" height="54"></rect><g class="label" style="" transform="translate(-103.6015625, -12)"><rect></rect><foreignObject width="207.203125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel "><p>Uživateli se zobrazila stránka</p></span></div></foreignObject></g></g></g></g></g></svg></div><h3 id='názvy-cookies'><span>Názvy cookies</span></h3><p><span>V rámci schématu se využívají dvě cookies, které mají názvy, které neodpovídají jejich pravým účelům:</span></p><ul><li><p><code>render_css</code><span> = identifikátor prohlížeče</span></p></li><li><p><code>svd</code><span> = identifikátor návštěvy</span></p></li></ul><p><span>Je to z toho důvodu, aby nebylo na první pohled jasné, že se jedná o cookies sloužící pro ukládání jakýchkoliv identifikátorů či využité v rámci sběru dat o návštěvnících.</span></p><h3 id='generování-hodnoty-cookie-rendercss'><span>Generování hodnoty cookie render_css</span></h3><p><span>V případě, že se jedná o první návštěvu konkrétního uživatel na webu, tak ten ještě nemá ve svém prohlížeči uloženou cookie </span><code>render_css</code><span>, která by identifikovala jeho prohlížeč. Proto je potřeba hodnotu pro tuto cookie vygenerovat na straně serveru.</span></p><p><span>Bude se jednat o řetězec ve formátu, který odpovídá regulárnímu výrazu </span><code>^[a-z]{6}_[0-9]{10}$</code><span>, tj. </span><strong><span>6 malých písmen anglické abecedy + podtržítko + 10 číslic</span></strong><span>.</span></p><p><span>Písmena musí být náhodně vygenerována. </span><strong><span>Číslo odpovídá UNIX timestampu</span></strong><span> (počet sekund od 1.1.1970), kdy byl HTTP požadavek přijat.</span></p><p><span>Hodnota tedy může vypadat například následovně.</span></p><blockquote><p><span>hdezhv_1769602020</span></p></blockquote><p><span>Kombinace písmen a číslic je využita proto, aby hodnota nepřipomínala na první pohled běžný formát identifikátorů.</span></p><h3 id='ukládání-dat-do-interní-databázové-tabulky'><span>Ukládání dat do interní databázové tabulky</span></h3><p><span>Z požadavku na server lze vyčíst různé informace, z nichž některé budou důležité pro následné transformace a analýzy dat. Tyto informace je potřeba </span><strong><span>ukládat pro každou novou návštěvu do interní databázové tabulky</span></strong><span>. </span></p><figure class='table-figure'><table><thead><tr><th><span>Název sloupce</span></th><th><span>Typ hodnoty</span></th><th><span>Příklad</span></th></tr></thead><tbody><tr><td><span>session_id</span></td><td><span>Interní ID návštěvy (autoinkrementální)</span></td><td><span>2</span></td></tr><tr><td><span>client</span></td><td><span>Hostname webu</span></td><td><span>vema.cz</span></td></tr><tr><td><span>timestamp</span></td><td><span>Časová známka v UTC, kdy byl HTTP požadavek přijat</span></td><td><span>2025-09-28 12:33:00 UTC</span></td></tr><tr><td><span>landing_page</span></td><td><span>URL vstupní stránky se všemi parametry</span></td><td><a href='https://www.vema.cz/cs-cz/mzdy-komplet?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=Brand%20(hlavn%C3%AD)&amp;utm_id=675492716&amp;gad_source=1&amp;gad_campaignid=675492716' target='_blank' class='url'>https://www.vema.cz/cs-cz/mzdy-komplet?utm_source=google&utm_medium=cpc&utm_campaign=Brand%20(hlavn%C3%AD)&utm_id=675492716&gad_source=1&gad_campaignid=675492716</a></td></tr><tr><td><span>referrer</span></td><td><span>Referrer vstupní stránky</span></td><td><a href='https://www.google.com/' target='_blank' class='url'>https://www.google.com/</a></td></tr><tr><td><span>user_agent</span></td><td><span>Hodnota User-Agent, který přišel s požadavkem</span></td><td><span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36</span></td></tr><tr><td><span>browser_id</span></td><td><span>Hodnota cookie render_css, tj. identifikátor prohlížeče</span></td><td><span>hdezhv_1769602020</span></td></tr><tr><td><span>ip_address</span></td><td><span>IP adresa, ze které přišel požadavek</span></td><td><span>90.86.76.33</span></td></tr></tbody></table></figure><div class="md-alert md-alert-note note"><p><span class='md-alert-text md-alert-text-note'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</span><br></p><p><span>Názvy sloupců jsou pouze navrhované a je možné použít libovolné vlastní dle svých konvencí. Tyto názvy sloupců jsou využité ještě v sekci věnované BigQuery.</span></p></div><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><span>Je možné mít jednu společnou tabulku pro vema.cz a vema.sk</span></p></div><p><span>Všechny tyto informace jsou běžně dostupné z HTTP requestu.</span></p><p><span>Následně budou tyto informace z interní databáze jednou denně odesílány do BigQuery.</span></p><h3 id='generování-hodnoty-cookie-svd'><span>Generování hodnoty cookie svd</span></h3><p><span>V případě, že se jedná o vstupní stránku aktuální návštěvy, tak není nastavená cookie </span><code>svd</code><span>, která obsahuje identifikátor návštěvy.</span></p><p><span>Mělo by se jednat o celé číslo, které bude odpovídat hodnotě ze sloupce </span><code>session_id</code><span> u právě vloženého záznamu do interní databáze návštěv.</span></p><h2 id='odeslání-dat-do-bigquery'><span>Odeslání dat do BigQuery</span></h2><h3 id='kdy'><span>Kdy</span></h3><p><span>Pravidelně každý den v 6:00 ráno odesílat data z předchozího dne z interní databáze do BigQuery.</span></p><p><span>Data do tabulky inkrementálně přidávat, nemazat.</span></p><p><span>Důvodem pro dávkové odesílání je oddělení okamžiku sběru dat od okamžiku jejich odeslání. Díky tomu je sníží riziko chyby a také bude případně existovat záloh surových dat v interní databázi, pokud by došlo k problémům s přesunem dat do BigQuery.</span></p><h3 id='kam'><span>Kam</span></h3><p><span>Data je potřeba odesílat do této existující tabulky v BigQuery.</span></p><figure class='table-figure'><table><thead><tr><th><span>Projekt</span></th><th><span>Dataset</span></th><th><span>Tabulka</span></th></tr></thead><tbody><tr><td><span>seyfor-com-project</span></td><td><span>vema_funnel</span></td><td><span>sessions_raw</span></td></tr></tbody></table></figure><p><span>Tabulka má následující schéma.</span></p><figure class='table-figure'><table><thead><tr><th><span>Název sloupce</span></th><th><span>Datový typ</span></th><th><span>Zdroj dat</span></th></tr></thead><tbody><tr><td><span>session_id</span></td><td><span>INTEGER</span></td><td><span>Sloupec </span><strong><span>session_id</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>client</span></td><td><span>STRING</span></td><td><span>Sloupec </span><strong><span>client</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>timestamp</span></td><td><span>TIMESTAMP</span></td><td><span>Sloupec </span><strong><span>timestamp</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>landing_page</span></td><td><span>STRING</span></td><td><span>Sloupec </span><strong><span>landing_page</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>referrer</span></td><td><span>STRING</span></td><td><span>Sloupec </span><strong><span>referrer</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>user_agent</span></td><td><span>STRING</span></td><td><span>Sloupec </span><strong><span>user_agent</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>browser_id</span></td><td><span>STRING</span></td><td><span>Sloupec </span><strong><span>browser_id</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>ip_address</span></td><td><span>STRING</span></td><td><span>Sloupec </span><strong><span>ip_address</span></strong><span> ze zdrojové tabulky</span></td></tr><tr><td><span>updated_at</span></td><td><span>TIMESTAMP</span></td><td><span>Časová známka vložení záznamu do BigQuery tabulky</span></td></tr></tbody></table></figure><p><span>Testování je možné provádět přímo nad touto tabulkou. Před spuštěním produkční verze řešení se obsah tabulky vymaže.</span></p><h3 id='jak'><span>Jak</span></h3><p><span>Pro různé programovací jazyky existují knihovny pro připojení do BigQuery. </span></p><p><span>Pro přístup do BigQuery bude potřeba využít servisní účet </span><code>vema-sa@seyfor-com-project.iam.gserviceaccount.com</code><span>.</span></p><p><span>Autentizace probíhá prostřednictvím JSON klíče, který je na vyžádání dostupný.</span></p><p>&nbsp;</p></div></div>
+</body>
+</html>
