@@ -12,7 +12,7 @@ To ve výsledku může způsobovat **významné odchylky mezi reálnými daty a 
 
 # Nevhodná práce se souhlasy
 
-![image-20251118-174928.png](https://zdenekhejl.atlassian.net/wiki/download/attachments/64159745/image-20251118-174928.png?api=v2)
+![image-20251118-174928.png](code.png)
 
 ## Nevhodné seskupení souhlasů
 
@@ -172,6 +172,6 @@ Nově bude měření do Facebooku realizováno čistě prostřednictvím GTM.
 
 Informace o událostech na webu (zobrazení stránky, přidání do košíku, odeslaná objednávka apod.) se nyní odesílají do dataLayeru pouze v případě, že jsou dostupné analytické souhlasy.
 
-![image-20251119-092757.png](https://zdenekhejl.atlassian.net/wiki/download/attachments/64159745/image-20251119-092757.png?api=v2)
+![image-20251119-092757.png](datalayer.png)
 
 Je potřeba, aby se tato **data odesílala do dataLayeru i bez dostupných souhlasů**.
